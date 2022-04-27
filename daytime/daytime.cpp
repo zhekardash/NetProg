@@ -27,7 +27,7 @@ int main(int argc, char **argv)
     strcpy(buf, "Могу я узнать дату и время?\n");
     int msgLen = strlen(buf);
 
-    int mySocket = socket(AF_INET, SOCK_STREAM, 0);
+    int mySocket = socket(AF_INET, SOCK_DGRAM, 0);
     if (mySocket == -1) {
         errHandler("Ошибка открытия сокета", 11);
     }
